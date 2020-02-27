@@ -16,3 +16,11 @@ client.post('statuses/update', {status: 'Working on Node.js and MongoDb!'})
   	console.log(error);
     throw error;
   });
+
+client.get('search/tweets', {q: '#TeamIndia', count: 20})
+  .then(function (tweet) {
+    console.log(tweet);
+}).catch(function (error) {
+  	console.log(error);
+    throw error;
+});
